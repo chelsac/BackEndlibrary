@@ -3,6 +3,7 @@ const cors=require('cors');
 const bookData=require('./model/bookdata');
 const userData=require('./model/userdata');
 const path = require('path');
+const port= process.env.PORT || 3000;
 
 const app=new express();
 app.use(cors());
@@ -166,7 +167,7 @@ app.get('/api/books', function(req,res){
      }
      );
 
-app.listen(3000,function(){
+app.listen(port,function(){
     console.log("server is running at "+3000);
 });
 
